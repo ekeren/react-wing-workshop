@@ -1,4 +1,4 @@
-<img width="1134" alt="image" src="https://github.com/ekeren/react-wing-workshop/assets/1727147/c4444495-904e-4a35-bbf1-1e32b453cdc0">In this section we will create a simple API Gateway that responds to GET /hello
+In this section we will create a simple API Gateway that responds to `GET /hello`
 
 ## Instructions
 
