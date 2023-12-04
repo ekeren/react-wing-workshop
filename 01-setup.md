@@ -56,4 +56,6 @@ Verify that Wing toolchain is working as expected
 
 Verify that docker is installed correctly by replacing `cloud.Bucket` with [`ex.Redis`](https://www.winglang.io/docs/standard-library/ex/redis) 
 
-:thinking: can you build an abstraction?
+## A Bigger Challenge :thinking:
+
+Can you build an abstraction on top of them?
