@@ -14,8 +14,10 @@ The result should be a running react website
 1. Create `backend/main.w`
 2. run from root: 
   ```sh 
-  wing run backend/main.w
+  BROWSER=none wing run backend/main.w
   ```
+> BROWSER=none prevents react from starting a new browser window on every run
+    
 3. Add the following code:
   ```ts
   bring ex;
