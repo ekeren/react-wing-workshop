@@ -2,7 +2,6 @@
 
 Verify that you can create a react app:
 ```sh
-cd 04-hello-react
 npx create-react-app client
 cd client
 npm start
