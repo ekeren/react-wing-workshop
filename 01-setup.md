@@ -31,9 +31,25 @@ To install the Wing VSCode extension, [download](https://marketplace.visualstudi
 
 ## Wing it
 
+
+Create `hello.main.w` with the following:
+```ts
+bring cloud;
+
+let queue = new cloud.Queue(timeout: 2m);
+let bucket = new cloud.Bucket();
+let counter = new cloud.Counter();
+
+queue.setConsumer(inflight (body: str): str => {
+  let next = counter.inc();
+  let key = "key-{next}";
+  bucket.put(key, body);
+});
+```
+
 Verify that Wing toolchain is working as expected
   ```sh
-  wing run 01-setup/main.w
+  wing run hello.main.w
   ```
 
 ## Challenge

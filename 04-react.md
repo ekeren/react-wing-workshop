@@ -105,16 +105,17 @@ We will use react hooks in order to read the title from our API Gateway
   let api = new cloud.Api(
     cors: true,
     corsOptions: {
-    allowHeaders: ["*"],
-    allowMethods: [
-      http.HttpMethod.OPTIONS, 
-      http.HttpMethod.GET, 
-      http.HttpMethod.POST, 
-      http.HttpMethod.DELETE, 
-      http.HttpMethod.PUT,
-      http.HttpMethod.HEAD
-    ],
-  });
+      allowHeaders: ["*"],
+      allowMethods: [
+        http.HttpMethod.OPTIONS, 
+        http.HttpMethod.GET, 
+        http.HttpMethod.POST, 
+        http.HttpMethod.DELETE, 
+        http.HttpMethod.PUT,
+        http.HttpMethod.HEAD
+      ],
+   }
+  );
   
   api.get("/title", inflight () => {
     return {
@@ -124,5 +125,4 @@ We will use react hooks in order to read the title from our API Gateway
   });
   
   react.addEnvironment("apiUrl", api.url);
-  
   ```
