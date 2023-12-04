@@ -11,14 +11,17 @@ The result should be a running react website
 
 ## React in Wing
 
-1. Open `backend/main.w`
-2. From `04-hello-react` run: 
+1. Create `backend/main.w`
+2. run from root: 
   ```sh 
   wing run backend/main.w
   ```
 3. Add the following code:
    ```ts
-
+  bring ex;
+  bring cloud;
+  bring http;
+  
   let react = new ex.ReactApp(
     projectPath: "../client",  
   );
