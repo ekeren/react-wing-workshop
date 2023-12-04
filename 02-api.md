@@ -1,6 +1,8 @@
-## Wing it
+<img width="1134" alt="image" src="https://github.com/ekeren/react-wing-workshop/assets/1727147/c4444495-904e-4a35-bbf1-1e32b453cdc0">In this section we will create a simple API Gateway that responds to GET /hello
 
-1. Create api.main.w
+## Instructions
+
+1. Create `api.main.w`
   ```ts
   bring cloud;
   bring http;
@@ -15,21 +17,22 @@
     expect.equal(res.body, "React Wing Workshop");
   }
   ```
-2. Run the software
+2. Run it locally
 ```sh
   wing run api.main.w
 ```
-3. From the console Run the test, notice the  `404 !== 200` error 
-4. Can you fix the code? check out [`cloud.Api` docs](https://www.winglang.io/docs/standard-library/cloud/api)
-5. Verify the `"GET hello"` test is working 
+3. Run the test from the console and examine the output
+   <img width="1134" alt="image" src="https://github.com/ekeren/react-wing-workshop/assets/1727147/28a3f485-d589-46f0-a154-a1968bc56949">
+
+5. Can you fix the code? :thinking: (Hint: [`cloud.Api`docs](https://www.winglang.io/docs/standard-library/cloud/api))
    
+:trophy:
 You can now use different options to see that your api gateway is working: 
 - Run tests from the Wing Console 
 - Run tests using the cli `wing test api.main.w`
 - Interactively test the `/hello` endpoint from Wing Console
 - Interactively test  the `/hello` endpoint using your browser
 
-## Wing it
 
 ## Bonus Testing on `tf-aws`
 
