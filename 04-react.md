@@ -17,7 +17,7 @@ The result should be a running react website
   wing run backend/main.w
   ```
 3. Add the following code:
-   ```ts
+  ```ts
   bring ex;
   bring cloud;
   bring http;
