@@ -76,38 +76,49 @@ Lets see how we can use this mechanism
 ## Call API Gateway and display 
 
 We will use react hooks in order to read the title from our API Gateway
-1. Add the following code to the top of `client/src/App.js`
+1. Replace the content of `client/src/App.js` with the following code:
   ```js
-  import {useEffect, useState} from "react";
-  ```
+  import logo from './logo.svg';
+import {useEffect, useState} from "react";
+import './App.css';
 
-2. Change the implementation of the `App` function to fetch 
-  ```js
+function App() {
   const [title, setTitle] = useState("Learn React");
 
-  const getTitle = async () => {
-    const response = await fetch(`${window.wingEnv.apiUrl}/title`);
-    setTitle(await response.text());  
-  }
+const getTitle = async () => {
+  const response = await fetch(`${window.wingEnv.apiUrl}/title`);
+  setTitle(await response.text());  
+}
 
-  useEffect(() => {
-    getTitle();
-  }, []);
-    
-
+useEffect(() => {
+  getTitle();
+}, []);
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-              {title}
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+  {title}
+        </a>
       </header>
     </div>
   );
-  ```
-  
-  Notice console problems in the browser 
+}
 
-3. Lets create `window.wingEnv.apiUrl`, in `backend/main.w`:
+export default App;
+```
+
+**Notice console problems in the browser **
+
+2. Lets create `window.wingEnv.apiUrl`, in `backend/main.w`:
   ```ts
   let api = new cloud.Api(
     cors: true,
