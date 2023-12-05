@@ -10,7 +10,7 @@ This repo is a step by step guide for an online workshop ([eventbrite](https://w
 - [Learn about Inflights](https://www.winglang.io/docs/concepts/inflights) - Preflight and Inflight are Winglan'g most important core concept
 - [Cheat Sheet](./cheatsheet.md) - Let's learn Wing in 5 minutes, shall we?
 - [Language Reference](https://www.winglang.io/docs/language-reference) - A comlete language reference of Winglang
-- [Using Javascript inside Wing](https://www.winglang.io/docs/examples/using-javascript) - You can use existing javascript code in wing using the `extern` keyword
+- [Playground](https://www.winglang.io/play/) - Write and test wing code online
 
 
 ### Workshop sessions
