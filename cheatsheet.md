@@ -1,11 +1,3 @@
----
-title: Wing by Example
-id: by-example
-description: Learn Wing by Example
-sidebar_label: Wing By Example
-keywords: [By example, cheat sheet, Wing reference, Wing language, language, Wing language spec, Wing programming language]
----
-
 Let's learn Wing in 5 minutes, shall we?
 
 ## Primitive Types
