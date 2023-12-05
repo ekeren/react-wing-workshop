@@ -26,7 +26,7 @@ In this section we will create a simple API Gateway that responds to `GET /hello
    ![image](https://github.com/ekeren/react-wing-workshop/assets/1727147/0d1a05a0-1f81-4514-a30a-9967cda0b200)
 
 
-5. Can you fix the code so the test pass? (Hint: [`cloud.Api`docs](https://www.winglang.io/docs/standard-library/cloud/api))
+5. Can you fix the code so the test pass? (Hint: See `cloud.Api` [docs](https://www.winglang.io/docs/standard-library/cloud/api))
 
   <details>
     <summary>Solution</summary>
