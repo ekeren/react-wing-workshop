@@ -1,6 +1,8 @@
+In this session we will create a new react app, and connect it to Winglang backend
+
 ## Prerequisites
 
-Verify that you can create a react app:
+First, lets verify that you can create a react application using `create-react-app`:
 ```sh
 npx create-react-app client
 cd client
