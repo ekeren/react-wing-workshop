@@ -66,6 +66,24 @@ docker ps
 3. Create the Redis instance instead of the `cloud.Bucket` one
 4. Use `set` inflight method instead of `cloud.Bucket`'s `put` method
 
+<details>
+  <summary>Solution</summary>
+
+        bring cloud;
+        bring ex;
+        
+        let queue = new cloud.Queue(timeout: 2m);
+        let redis = new ex.Redis();
+        let counter = new cloud.Counter();
+        
+        queue.setConsumer(inflight (body: str): str => {
+          let next = counter.inc();
+          let key = "key-{next}";
+          redis.set(key, body);
+        });    
+
+</details>
+
 ## A Bigger Challenge :thinking:
 
 Can you build an interface called `IKVStore` and two concrete classes `BucketKVStore` and `RedisKVStore` that implement it.
