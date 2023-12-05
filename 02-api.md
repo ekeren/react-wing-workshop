@@ -2,7 +2,7 @@ In this section we will create a simple API Gateway that responds to `GET /hello
 
 ## Instructions
 
-1. Create `api.main.w`
+1. Replace `backebd/main.w`with the following content:
   ```ts
   bring cloud;
   bring http;
@@ -19,7 +19,7 @@ In this section we will create a simple API Gateway that responds to `GET /hello
   ```
 2. Run it locally
 ```sh
-  wing run api.main.w
+  wing run backedn/main.w
 ```
 3. Run the test from the console and examine the output
    <img width="1134" alt="image" src="https://github.com/ekeren/react-wing-workshop/assets/1727147/28a3f485-d589-46f0-a154-a1968bc56949">
@@ -41,9 +41,12 @@ In this section we will create a simple API Gateway that responds to `GET /hello
   </details>
 
 You can now use different options to see that your api gateway is working: 
-- Run tests from the Wing Console 
-- Run tests using the cli `wing test api.main.w`
-- Interactively test the `/hello` endpoint from Wing Console
-- Interactively test  the `/hello` endpoint using your browser
+- When `wing run backend/main.w` is running you can:
+  - Run tests from the Wing Console
+  - Interactively test the `/hello` endpoint from within the Wing Console
+  - Interactively test the `/hello` endpoint using your browser
+- Run tests using the cli `wing test backend/main.w`
 
+## Conclusion 
 
+Great, you just finished creating a simple hello world web service 
