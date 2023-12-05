@@ -21,7 +21,7 @@ The result should be a running react website
   ```
 > BROWSER=none prevents react from starting a new browser window on every run
     
-3. Add the following code:
+4. Add the following code into `backend/main.w`:
   ```ts
   bring ex;
   bring cloud;
