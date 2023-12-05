@@ -54,34 +54,3 @@ Verify that Wing toolchain is working as expected
   wing run backend/main.w
   ```
 
-## Challenge
-
-Replace `cloud.Bucket` with `ex.Redis` as our key value storage.
-
-1. Make sure you have docker running by doing: (you might need to start the docker daemon on your machine)
-```
-docker ps
-```
-2. Go to Redis [docs](https://www.winglang.io/docs/standard-library/ex/redis) to find how to use `Redis` in Winglang
-3. Create the Redis instance instead of the `cloud.Bucket` one
-4. Use `set` inflight method instead of `cloud.Bucket`'s `put` method
-
-<details>
-  <summary>Solution</summary>
-
-        bring cloud;
-        bring ex;
-        
-        let queue = new cloud.Queue(timeout: 2m);
-        let redis = new ex.Redis();
-        let counter = new cloud.Counter();
-        
-        queue.setConsumer(inflight (body: str): str => {
-          let next = counter.inc();
-          let key = "key-{next}";
-          redis.set(key, body);
-        });    
-
-</details>
-
-In Wing Console, you can click on the Redis resource and interact with the REPL (right hand side) 
