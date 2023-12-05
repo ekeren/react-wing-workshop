@@ -96,7 +96,7 @@ api.get("/title", inflight () => {
 });
 ```
 4. Use react hooks in order to read the title from our API Gateway, replace the content of `client/src/App.js` with the following code:
-  ```js
+```js
 import logo from './logo.svg';
 import {useEffect, useState} from "react";
 import './App.css';
