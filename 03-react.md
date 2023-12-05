@@ -76,52 +76,15 @@ Lets see how we can use this mechanism
   
 ## Call API Gateway and display 
 
-We will use react hooks in order to read the title from our API Gateway
-1. Replace the content of `client/src/App.js` with the following code:
-  ```js
-  import logo from './logo.svg';
-import {useEffect, useState} from "react";
-import './App.css';
-
-function App() {
-  const [title, setTitle] = useState("Learn React");
-
-const getTitle = async () => {
-  const response = await fetch(`${window.wingEnv.apiUrl}/title`);
-  setTitle(await response.text());  
-}
-
-useEffect(() => {
-  getTitle();
-}, []);
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-  {title}
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+Once we know how to pass parameters from the backend to the client, let use this capability to 
+set `window.wingEnv.apiUr` on the client. And fetch the title from our API 
+1. To set `apiUrl` go to `backend/main.w` and add:
+```ts
+  react.addEnvironment("apiUrl", api.url);
 ```
-
-**Notice console problems in the browser **
-
-2. Lets create `window.wingEnv.apiUrl`, in `backend/main.w`:
-  ```ts
-  let api = new cloud.Api(
+2. Enable cross origin resource sharing (cors) by adding `cors:true` and `corsOptions: ...` in `backend/main.w`: 
+```ts
+let api = new cloud.Api(
     cors: true,
     corsOptions: {
       allowHeaders: ["*"],
@@ -135,13 +98,44 @@ export default App;
       ],
    }
   );
-  
+```
+3. Create a new `/title` route in `backend/main.w`: 
+```
   api.get("/title", inflight () => {
     return {
       status:200,
       body: "Hello from Api Gateway"
     };
   });
-  
-  react.addEnvironment("apiUrl", api.url);
-  ```
+```
+4. Use react hooks in order to read the title from our API Gateway, replace the content of `client/src/App.js` with the following code:
+  ```js
+  import logo from './logo.svg';
+  import {useEffect, useState} from "react";
+  import './App.css';
+
+  function App() {
+    const [title, setTitle] = useState("Learn React");
+    const getTitle = async () => {
+    const response = await fetch(`${window.wingEnv.apiUrl}/title`);
+    setTitle(await response.text());  
+  }
+
+    useEffect(() => {
+      getTitle();
+    }, []);
+
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          {title}
+          </a>
+        </header>
+      </div>
+    );
+  }
+
+  export default App;
+```
+
