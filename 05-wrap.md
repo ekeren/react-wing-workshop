@@ -3,8 +3,10 @@ and add the relevant code on the client to interact with REST API provided by `c
 
 ## Instructions 
 
-1. Override the current client directory by downloading and unzipping [assets/client.zip](assets/client.zip)
-2. Paste the following code into `backend/main.w`:
+1. Override the current client directory by downloading and unzipping
+<a id="raw-url" href="https://raw.githubusercontent.com/ekeren/react-wing-workshop/main/assets/client.zip">assets/client.zip</a>
+
+3. Paste the following code into `backend/main.w`:
 ```ts
 bring ex;
 bring cloud;
