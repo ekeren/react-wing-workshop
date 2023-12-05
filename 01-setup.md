@@ -58,7 +58,7 @@ Make sure you have docker running by doing: (you might need to start the docker 
 docker ps
 ```
 
-Verify that docker is installed correctly by replacing `cloud.Bucket` with [`ex.Redis`](https://www.winglang.io/docs/standard-library/ex/redis) 
+Verify that docker is installed correctly by replacing `cloud.Bucket` with `ex.Redis` ([see docs on how](https://www.winglang.io/docs/standard-library/ex/redis) )
 
 ## A Bigger Challenge :thinking:
 
