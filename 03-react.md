@@ -100,7 +100,7 @@ let api = new cloud.Api(
   );
 ```
 3. Create a new `/title` route in `backend/main.w`: 
-```
+```ts
   api.get("/title", inflight () => {
     return {
       status:200,
