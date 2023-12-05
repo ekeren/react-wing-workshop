@@ -47,6 +47,4 @@ You can now use different options to see that your api gateway is working:
   - Interactively test the `/hello` endpoint using your browser
 - Run tests using the cli `wing test backend/main.w`
 
-## Conclusion 
-
-Great, you just finished creating a simple hello world web service 
+🚀 Great, you just finished creating a simple hello world web service 🚀 
