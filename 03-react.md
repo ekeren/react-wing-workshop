@@ -120,11 +120,11 @@ function App() {
     const response = await fetch(`${window.wingEnv.apiUrl}/title`);
     setTitle(await response.text());  
   }
-
+  
   useEffect(() => {
     getTitle();
   }, []);
-
+  
   return (
     <div className="App">
       <header className="App-header">
