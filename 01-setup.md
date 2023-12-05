@@ -31,8 +31,7 @@ To install the Wing VSCode extension, [download](https://marketplace.visualstudi
 
 ## Wing it
 
-
-Create `hello.main.w` with the following:
+Create a new directory on your filesystem and create `hello.main.w` with the following content:
 ```ts
 bring cloud;
 
