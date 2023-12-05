@@ -29,14 +29,14 @@ In this section we will create a simple API Gateway that responds to `GET /hello
   <details>
     <summary>Solution</summary>
     
-    ```ts
+    
     api.get("/hello", inflight () => {
       return {
         status:200,
         body:"React Wing Workshop"
       };
     });
-    ```
+    
     
   </details>
 
