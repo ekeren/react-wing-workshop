@@ -21,7 +21,7 @@ In this section we will create a simple API Gateway that responds to `GET /hello
 ```sh
   wing run backedn/main.w
 ```
-3. Run the test from the console and examine the output
+3. Run the test from Wing Console (left hand side) and examine the test result in the logs area (bottom side)
    <img width="1134" alt="image" src="https://github.com/ekeren/react-wing-workshop/assets/1727147/28a3f485-d589-46f0-a154-a1968bc56949">
 
 5. Can you fix the code? (Hint: [`cloud.Api`docs](https://www.winglang.io/docs/standard-library/cloud/api))
