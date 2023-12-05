@@ -13,8 +13,9 @@ The result should be a running react website
 
 ## React in Wing
 
-1. Create `backend/main.w`
-2. run from root: 
+1. Create a folder named `backend`
+2. Create `backend/main.w`
+3. run from root: 
   ```sh 
   BROWSER=none wing run backend/main.w
   ```
