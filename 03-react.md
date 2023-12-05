@@ -9,7 +9,8 @@ cd client
 npm start
 ```
 
-The result should be a running react website
+The result should be a running react website.
+Once you verify it is working you can close the server with `Ctrl-C`
 
 ## React in Wing
 
