@@ -53,6 +53,11 @@ Verify that Wing toolchain is working as expected
 
 ## Challenge
 
+Make sure you have docker running by doing: (you might need to start the docker daemon on your machine)
+```
+docker ps
+```
+
 Verify that docker is installed correctly by replacing `cloud.Bucket` with [`ex.Redis`](https://www.winglang.io/docs/standard-library/ex/redis) 
 
 ## A Bigger Challenge :thinking:
