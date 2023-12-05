@@ -2,10 +2,18 @@
 
 _Learn how to build a React.JS app with Wing_
 
-
-
 This repo is a step by step guide for an online workshop ([eventbrite](https://www.eventbrite.com/e/winglang-react-workshop-tickets-754616256537)).
 
+
+### Some General Resource:
+
+- [Learn about Inflights](https://www.winglang.io/docs/concepts/inflights) - Preflight and Inflight are Winglan'g most important core concept
+- [Cheat Sheet](./cheatsheet.md) - Let's learn Wing in 5 minutes, shall we?
+- [Language Reference](https://www.winglang.io/docs/language-reference) - A comlete language reference of Winglang
+
+
+
+### Workshop sessions
 
 1. [It’s nearly time to fly](./01-setup.md) - Install and verify winglang toolchain is working on our computer.
 2. [Prepare for liftoff](./02-api.md) - Getting to know `cloud.Api`, testing framework.
