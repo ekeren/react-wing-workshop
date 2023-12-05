@@ -72,7 +72,7 @@ Lets see how we can use this mechanism
    react.addEnvironment("title", "Learn React with Wing");
    ```
   
-## Call API Gateway and display 
+## GET title from API 
 
 Once we know how to pass parameters from the backend to the client, let use this capability to 
 set `window.wingEnv.apiUr` on the client. And fetch the title from our API 
@@ -95,7 +95,7 @@ api.get("/title", inflight () => {
   };
 });
 ```
-4. Use react hooks in order to read the title from our API Gateway, replace the content of `client/src/App.js` with the following code:
+4. Use react hooks in order to read the title from our API, replace the content of `client/src/App.js` with the following code:
 ```js
 import logo from './logo.svg';
 import {useEffect, useState} from "react";
