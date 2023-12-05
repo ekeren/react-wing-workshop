@@ -3,10 +3,16 @@ and add the relevant code on the client to interact with REST API provided by `c
 
 ## Instructions 
 
-1. Override the current client directory by downloading and unzipping
+1. Download and Unzip 
 <a id="raw-url" href="https://raw.githubusercontent.com/ekeren/react-wing-workshop/main/assets/client.zip">assets/client.zip</a>
+and override the current `client`. The code there include interacting with the REST API, react routes, some CSS design, etc...
+2. Install new client depedencies
+```
+cd client
+npm install
+```
 
-3. Paste the following code into `backend/main.w`:
+3. The new react app expect more routes, paste the following code (that uses `FlatFileSystem`) into `backend/main.w`:
 ```ts
 bring ex;
 bring cloud;
@@ -75,4 +81,16 @@ api.put("/api/folders/:folder/:file", inflight (req) => {
   };
 });
 ```
-2. 
+4. Start the service using
+```
+BROWSER=none wing run backend/main.w
+```
+5. Compile it to terraform for aws and apply it (requires terraform CLI with configure aws credentials)
+```
+wing compile -t tf-aws backend/main.w
+cd backend/target/main.tfaws
+terraform init
+terraform apply
+```
+
+ 🚀 Congradulation, You now have a running React + Wing website on AWS!!! 🚀
