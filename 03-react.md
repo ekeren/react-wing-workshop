@@ -23,15 +23,15 @@ Once you verify it is working you can close the server with `Ctrl-C`
 > BROWSER=none prevents react from starting a new browser window on every run
     
 4. Add the following code into `backend/main.w`:
-  ```ts
-  bring ex;
-  bring cloud;
-  bring http;
-  
-  let react = new ex.ReactApp(
-    projectPath: "../client",  
-  );
-  ```
+```ts
+bring ex;
+bring cloud;
+bring http;
+
+let react = new ex.ReactApp(
+  projectPath: "../client",
+);
+```
   The Wing Console should be updated
 
 
