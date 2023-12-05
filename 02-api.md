@@ -45,8 +45,8 @@ In this section we will create a simple API Gateway that responds to `GET /hello
 You can now use different options to see that your api gateway is working: 
 - When `wing run backend/main.w` is running you can:
   - Run tests from the Wing Console
-  - Interactively test the `/hello` endpoint from within the Wing Console
-  - Interactively test the `/hello` endpoint using your browser
+  - Interactively test the `/hello` endpoint from within the Wing Console (using right hand side widget)
+  - Interactively test the `/hello` endpoint using your browser (by copying the URL from the right hand side widget)
 - Run tests using the cli `wing test backend/main.w`
 
 🚀 Great, you just finished creating a simple hello world web service 🚀 
