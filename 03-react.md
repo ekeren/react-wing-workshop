@@ -85,18 +85,7 @@ set `window.wingEnv.apiUr` on the client. And fetch the title from our API
 2. Enable cross origin resource sharing (cors) by adding `cors:true` and `corsOptions: ...` in `backend/main.w`: 
 ```ts
 let api = new cloud.Api(
-  cors: true,
-  corsOptions: {
-    allowHeaders: ["*"],
-    allowMethods: [
-      http.HttpMethod.OPTIONS, 
-      http.HttpMethod.GET, 
-      http.HttpMethod.POST, 
-      http.HttpMethod.DELETE, 
-      http.HttpMethod.PUT,
-      http.HttpMethod.HEAD
-   ],
-  }
+  cors: true
 );
 ```
 3. Create a new `/title` route in `backend/main.w`: 
@@ -104,7 +93,7 @@ let api = new cloud.Api(
 api.get("/title", inflight () => {
   return {
     status:200,
-    body: "Hello from Api Gateway"
+    body: "Hello from Api"
   };
 });
 ```
