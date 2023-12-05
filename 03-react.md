@@ -139,3 +139,5 @@ let api = new cloud.Api(
   export default App;
 ```
 
+Check that every change in either the client side or the server side (replace response of title) will hot-reload your app
+
