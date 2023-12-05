@@ -85,58 +85,58 @@ set `window.wingEnv.apiUr` on the client. And fetch the title from our API
 2. Enable cross origin resource sharing (cors) by adding `cors:true` and `corsOptions: ...` in `backend/main.w`: 
 ```ts
 let api = new cloud.Api(
-    cors: true,
-    corsOptions: {
-      allowHeaders: ["*"],
-      allowMethods: [
-        http.HttpMethod.OPTIONS, 
-        http.HttpMethod.GET, 
-        http.HttpMethod.POST, 
-        http.HttpMethod.DELETE, 
-        http.HttpMethod.PUT,
-        http.HttpMethod.HEAD
-      ],
-   }
-  );
+  cors: true,
+  corsOptions: {
+    allowHeaders: ["*"],
+    allowMethods: [
+      http.HttpMethod.OPTIONS, 
+      http.HttpMethod.GET, 
+      http.HttpMethod.POST, 
+      http.HttpMethod.DELETE, 
+      http.HttpMethod.PUT,
+      http.HttpMethod.HEAD
+   ],
+  }
+);
 ```
 3. Create a new `/title` route in `backend/main.w`: 
 ```ts
-  api.get("/title", inflight () => {
-    return {
-      status:200,
-      body: "Hello from Api Gateway"
-    };
-  });
+api.get("/title", inflight () => {
+  return {
+    status:200,
+    body: "Hello from Api Gateway"
+  };
+});
 ```
 4. Use react hooks in order to read the title from our API Gateway, replace the content of `client/src/App.js` with the following code:
   ```js
-  import logo from './logo.svg';
-  import {useEffect, useState} from "react";
-  import './App.css';
+import logo from './logo.svg';
+import {useEffect, useState} from "react";
+import './App.css';
 
-  function App() {
-    const [title, setTitle] = useState("Learn React");
-    const getTitle = async () => {
+function App() {
+  const [title, setTitle] = useState("Learn React");
+  const getTitle = async () => {
     const response = await fetch(`${window.wingEnv.apiUrl}/title`);
     setTitle(await response.text());  
   }
 
-    useEffect(() => {
-      getTitle();
-    }, []);
+  useEffect(() => {
+    getTitle();
+  }, []);
 
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          {title}
-          </a>
-        </header>
-      </div>
-    );
-  }
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        {title}
+        </a>
+      </header>
+    </div>
+  );
+}
 
-  export default App;
+export default App;
 ```
 
 Check that every change in either the client side or the server side (replace response of title) will hot-reload your app
