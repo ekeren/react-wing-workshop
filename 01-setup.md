@@ -31,7 +31,10 @@ To install the Wing VSCode extension, [download](https://marketplace.visualstudi
 
 ## Wing it
 
-Create a new directory on your filesystem and create `hello.main.w` with the following content:
+1. Create a new directory on your filesystem (e.g. `/tmp/wing-workshop`)
+2. Start vscode from this directory
+3. Create a `backend` directory
+4. Create `backend/main.w` with the following content:
 ```ts
 bring cloud;
 
@@ -48,18 +51,21 @@ queue.setConsumer(inflight (body: str): str => {
 
 Verify that Wing toolchain is working as expected
   ```sh
-  wing run hello.main.w
+  wing run backend/main.w
   ```
 
 ## Challenge
 
-Make sure you have docker running by doing: (you might need to start the docker daemon on your machine)
+Replace `cloud.Bucket` with `ex.Redis` as our key value storage.
+
+1. Make sure you have docker running by doing: (you might need to start the docker daemon on your machine)
 ```
 docker ps
 ```
-
-Verify that docker is installed correctly by replacing `cloud.Bucket` with `ex.Redis` (see [docs](https://www.winglang.io/docs/standard-library/ex/redis) to find how to use `Redis` in Winglang)
+2. Go to Redis [docs](https://www.winglang.io/docs/standard-library/ex/redis) to find how to use `Redis` in Winglang
+3. Create the Redis instance instead of the `cloud.Bucket` one
+4. Use `set` inflight method instead of `cloud.Bucket`'s `put` method
 
 ## A Bigger Challenge :thinking:
 
-Can you build an abstraction on top of them?
+Can you build an interface called `IKVStore` and two concrete classes `BucketKVStore` and `RedisKVStore` that implement it.
