@@ -2,7 +2,8 @@ In this session we will create a new react app, and connect it to Winglang backe
 
 ## Prerequisites
 
-First, lets verify that you can create a react application using `create-react-app`:
+First, lets verify that you can create a react application using `create-react-app`
+Make sure you are at the project root directory (and not inside `backend`)
 ```sh
 npx create-react-app client
 cd client
@@ -14,15 +15,7 @@ Once you verify it is working you can close the server with `Ctrl-C`
 
 ## React in Wing
 
-1. Create a folder named `backend`
-2. Create `backend/main.w`
-3. run from root: 
-  ```sh 
-  BROWSER=none wing run backend/main.w
-  ```
-> BROWSER=none prevents react from starting a new browser window on every run
-    
-4. Add the following code into `backend/main.w`:
+1. Replace `backebd/main.w` with the following content:
 ```ts
 bring ex;
 bring cloud;
@@ -32,8 +25,13 @@ let react = new ex.ReactApp(
   projectPath: "../client",
 );
 ```
-  The Wing Console should be updated
-
+2. Terminate (`Ctrl-C`) your existing `wing run` command and retrun it with `BROWSER=none` environment variable;
+  ```sh 
+  BROWSER=none wing run backend/main.w
+  ```
+> BROWSER=none prevents react from starting a new browser window on every run
+    
+As you can see you have a running React webapp from within the wing toolchain
 
 ## Pass configuration from Backend to Frontend
 
@@ -65,7 +63,7 @@ Lets see how we can use this mechanism
      ```html 
      <script src="./wing.js"></script>
      ```
-2. Lets see this in action, in  `client/src/App.js` Look for "Learn React" and replace it with:
+2. Lets see this in action, in  `client/src/App.js` Look for "Learn React" (probably line 18) and replace it with:
    ```js
      {window.wingEnv.title || "Learn React"}
    ```
@@ -127,5 +125,5 @@ function App() {
 export default App;
 ```
 
-Check that every change in either the client side or the server side (replace response of title) will hot-reload your app
+🚀 Check that every change in either the client side or the server side (replace response of title) will hot-reload your app 🚀
 
