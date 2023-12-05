@@ -46,15 +46,4 @@ You can now use different options to see that your api gateway is working:
 - Interactively test the `/hello` endpoint from Wing Console
 - Interactively test  the `/hello` endpoint using your browser
 
-## Bonus Testing on `tf-aws`
-
-**Note**: in order to test on `tf-aws` you must have  `terraform` cli installed AWS credentials setup with 
-permissions to run `terraform apply`.
-  
-
-You can run the same test on your tf-aws infra
-```sh
-  wing test api.main.w -t tf-aws
-```
-
 
