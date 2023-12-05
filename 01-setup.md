@@ -87,3 +87,59 @@ docker ps
 ## A Bigger Challenge :thinking:
 
 Can you build an interface called `IKVStore` and two concrete classes `BucketKVStore` and `RedisKVStore` that implement it.
+
+<details>
+  <summary>Solution</summary>
+  ### `backend/main.w`
+
+      bring cloud;
+      bring ex;
+      bring util;
+      
+      interface IKVStore {
+        inflight set(k:str, v:str);
+      }
+      
+      class BucketBasedKVStore impl IKVStore {
+        bucket :cloud.Bucket;
+        new() {
+          this.bucket = new cloud.Bucket();
+        }
+        pub inflight set(k: str, v:str){
+          this.bucket.put(k,v);
+        }
+      }
+      
+      
+      class RedisBasedKVStore impl IKVStore {
+        redis: ex.Redis;
+        new() {
+          this.redis = new ex.Redis();
+        }
+        pub inflight set(k: str, v:str){
+          this.redis.set(k,v);
+        }
+      }
+      
+      class Factory {
+        pub makeKv(): IKVStore {
+          if util.tryEnv("RedisBasedKVStore")? {
+            return new RedisBasedKVStore();
+          } else {
+            return new BucketBasedKVStore();
+          }
+        }
+      }
+      
+      let queue = new cloud.Queue(timeout: 2m);
+      let factory = new Factory();
+      let kv: IKVStore = factory.makeKv();
+      let counter = new cloud.Counter();
+      
+      queue.setConsumer(inflight (body: str): str => {
+        let next = counter.inc();
+        let key = "key-{next}";
+        kv.set(key, body);
+      });    
+
+</details>
