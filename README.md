@@ -6,7 +6,7 @@ _Learn how to build a React.JS app with Wing_
 This repo is a step-by-step guide for an online workshop ([eventbrite](https://www.eventbrite.com/e/winglang-react-workshop-tickets-754616256537)).
 
 Please [join Winglang's slack](https://t.winglang.io/slack), any workshop related discussions 
-should be done in a dedicated slack channel [#workshop-reac](https://winglang.slack.com/archives/C069JFTF6AC)
+should be done in a dedicated slack channel [#workshop-react](https://winglang.slack.com/archives/C069JFTF6AC)
 
 
 ## During the session, you'll learn the following
