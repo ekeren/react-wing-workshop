@@ -7,6 +7,7 @@ First, let's verify that you can create a React application using `create-react-
 ```sh
 npx create-react-app client
 cd client
+npm i --save @babel/plugin-proposal-private-property-in-object
 npm start
 ```
 
