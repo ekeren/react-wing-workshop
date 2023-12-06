@@ -36,8 +36,9 @@ See [Demo hosted on AWS](https://d9lecxfcp4503.cloudfront.net/)
 2. [It’s Nearly Time to Fly](./01-setup.md) - Install and verify the Winglang toolchain is working on our computer.
 3. [Prepare for Liftoff](./02-api.md) - Getting to know `cloud.Api`, testing framework.
 4. [Please Fasten Your Seat Belt](./03-react.md) - Blazing fast iteration cycles with `ex.ReactApp` connected to Winglang backend.
-5. [Entering an Area of Turbulence](./04-db.md) - Modeling a FlatFileSystem using DynamoDB & cloud.Bucket.
-6. [Thank You for Flying with Us](./05-wrap.md) - Wrapping it all together.
+5. [In Cruise Control](./04-preview.md) - Setting up preview environments on PR.
+6. [Entering an Area of Turbulence](./05-db.md) - Modeling a FlatFileSystem using DynamoDB & cloud.Bucket.
+7. [Thank You for Flying with Us](./06-wrap.md) - Wrapping it all together.
 
  
 ### Some General Resources:
