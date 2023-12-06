@@ -74,15 +74,15 @@ Let's see how we can use this mechanism:
 
 Once we know how to pass parameters from the backend to the client, let's use this capability to set `window.wingEnv.apiUrl` on the client and fetch the title from our API.
 
-1. To set `apiUrl`, go to `backend/main.w` and add:
-```ts
-  react.addEnvironment("apiUrl", api.url);
-```
-2. Enable cross-origin resource sharing (CORS) by adding `cors: true` and `corsOptions: ...` in `backend/main.w`: 
+1. Enable cross-origin resource sharing (CORS) by adding `cors: true` and `corsOptions: ...` in `backend/main.w`: 
 ```ts
 let api = new cloud.Api(
   cors: true
 );
+```
+2. To set `apiUrl`, go to `backend/main.w` and add:
+```ts
+  react.addEnvironment("apiUrl", api.url);
 ```
 3. Create a new `/title` route in `backend/main.w`: 
 ```ts
