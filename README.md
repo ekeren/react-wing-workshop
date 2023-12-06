@@ -18,9 +18,12 @@ This repo is a step-by-step guide for an online workshop ([eventbrite](https://w
 
 ## The Application
 
+A Flat File System browser and backend, the file system allows only one hirarchy of folders, each folder can have multiple files. 
+
+See [Demo hosted on AWS](https://d9lecxfcp4503.cloudfront.net/)
+
 ![winglang file system drawio (1)](https://github.com/ekeren/react-wing-workshop/assets/1727147/455df542-ec23-4f4a-ada8-ef941de7b53b)
 
-- [Demo hosted on AWS](https://d9lecxfcp4503.cloudfront.net/)
  
 
 ### Some General Resources:
