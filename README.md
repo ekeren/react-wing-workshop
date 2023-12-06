@@ -21,7 +21,6 @@ Please [join Winglang's slack](https://t.winglang.io/slack), we have a dedicated
 - How to create a preview environment using wing.cloud.
 
 
-
 ## The Application
 
 A Flat File System browser and backend, the file system allows only one hirarchy of folders, each folder can have multiple files. 
@@ -33,11 +32,12 @@ See [Demo hosted on AWS](https://d9lecxfcp4503.cloudfront.net/)
 
 ### Workshop Sessions
 
-1. [It’s Nearly Time to Fly](./01-setup.md) - Install and verify the Winglang toolchain is working on our computer.
-2. [Prepare for Liftoff](./02-api.md) - Getting to know `cloud.Api`, testing framework.
-3. [Please Fasten Your Seat Belt](./03-react.md) - Blazing fast iteration cycles with `ex.ReactApp` connected to Winglang backend.
-4. [Entering an Area of Turbulence](./04-db.md) - Modeling a FlatFileSystem using DynamoDB & cloud.Bucket.
-5. [Thank You for Flying with Us](./05-wrap.md) - Wrapping it all together.
+1. [Why even fly, I am comfortable where I am](https://raw.githubusercontent.com/ekeren/react-wing-workshop/main/assets/why.zip) - Probelms with Serverless and Solutions.
+2. [It’s Nearly Time to Fly](./01-setup.md) - Install and verify the Winglang toolchain is working on our computer.
+3. [Prepare for Liftoff](./02-api.md) - Getting to know `cloud.Api`, testing framework.
+4. [Please Fasten Your Seat Belt](./03-react.md) - Blazing fast iteration cycles with `ex.ReactApp` connected to Winglang backend.
+5. [Entering an Area of Turbulence](./04-db.md) - Modeling a FlatFileSystem using DynamoDB & cloud.Bucket.
+6. [Thank You for Flying with Us](./05-wrap.md) - Wrapping it all together.
 
  
 ### Some General Resources:
