@@ -1,9 +1,9 @@
-In this section we will make sure Wing is installed and working locally on your 
-machine.
+
+In this section, we will ensure that Wing is installed and functioning properly on your machine.
 
 ## Prerequisites
 
-* [Node.js](https://nodejs.org/en/) (>= 18.13.0)
+* [Node.js](https://nodejs.org/en/) (version 18.13.0 or higher)
 * [VSCode](https://code.visualstudio.com/download)
 * [Docker](https://www.docker.com/) or [OrbStack](https://orbstack.dev/) installed
 
@@ -23,17 +23,15 @@ wing --version
 
 ## Wing VSCode Extension
 
-The Wing VSCode Extension adds syntax highlighting and other conveniences for the Wing Programming Language in [VSCode].
+The Wing VSCode Extension adds syntax highlighting and other conveniences for the Wing Programming Language in [VSCode](https://code.visualstudio.com/).
 
-To install the Wing VSCode extension, [download](https://marketplace.visualstudio.com/items?itemName=Monada.vscode-wing) it from the VSCode Marketplace. It is distributed via the VSCode Marketplace.
-
-[VSCode]: https://code.visualstudio.com/
+To install the Wing VSCode extension, [download it from the VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=Monada.vscode-wing).
 
 ## Wing it
 
-1. Create a new directory on your filesystem (e.g. `/tmp/wing-workshop`)
-2. Start vscode from this directory
-3. Create a `backend` directory
+1. Create a new directory on your filesystem (e.g., `/tmp/wing-workshop`).
+2. Start VSCode from this directory.
+3. Create a `backend` directory.
 4. Create `backend/main.w` with the following content:
 ```ts
 bring cloud;
@@ -49,9 +47,9 @@ queue.setConsumer(inflight (body: str): str => {
 });
 ```
 
-Verify that Wing toolchain is working as expected
-  ```sh
-  wing run backend/main.w
-  ```
+Verify that the Wing toolchain is working as expected:
+```sh
+wing run backend/main.w
+```
 
-🚀 In Wing Console, you can push messages to the Queue and observe the files created in the Bucket 🚀 
+🚀 In the Wing Console, you can push messages to the Queue and observe the files created in the Bucket. 🚀 
