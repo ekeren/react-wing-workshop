@@ -5,6 +5,24 @@ _Learn how to build a React.JS app with Wing_
 
 This repo is a step-by-step guide for an online workshop ([eventbrite](https://www.eventbrite.com/e/winglang-react-workshop-tickets-754616256537)).
 
+## During the session, you'll learn the following
+
+- How to develop a Wing application.
+- How to build a serverless stack.
+- How to set up a React website using the Wing programming model.
+- How to work with DynamoDB, S3 Bucket, API Gateway, and Lambda Functions.
+- How to develop and run your application locally.
+- How to test your application both locally and on the cloud.
+- How to produce ready-to-apply Terraform assets.
+- How to create a preview environment using wing.cloud.
+
+## The Application
+
+![winglang file system drawio (1)](https://github.com/ekeren/react-wing-workshop/assets/1727147/455df542-ec23-4f4a-ada8-ef941de7b53b)
+
+- [Demo hosted on AWS](https://d9lecxfcp4503.cloudfront.net/)
+ 
+
 ### Some General Resources:
 
 - [Learn about Inflights](https://www.winglang.io/docs/concepts/inflights) - Preflight and Inflight are Winglang's most important core concepts.
