@@ -42,7 +42,7 @@ let counter = new cloud.Counter();
 
 queue.setConsumer(inflight (body: str): str => {
   let next = counter.inc();
-  let key = `key-${next}`;
+  let key = "key-{next}";
   bucket.put(key, body);
 });
 ```
